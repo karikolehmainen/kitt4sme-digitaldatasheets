@@ -1,4 +1,9 @@
-const schema = "{
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Form from "@rjsf/core";
+//import schema from "./datasheet.json";
+
+const schema = {
   type: "object",
   title: "KITT4SME Digital Datasheet",
   properties: {
@@ -12,7 +17,7 @@ const schema = "{
         $ref: "#/hardware_dependency"
       }
     },
-    software_dependencies": {
+    software_dependencies: {
       type: "array",
       title: "Component software dependencies",
       items: {
@@ -32,7 +37,7 @@ const schema = "{
       }
     }
   },
-  information: {
+ information: {
     type: "object",
     title: "Component information",
     properties: {
@@ -135,7 +140,7 @@ const schema = "{
           title: "physically stressful manual activities",
           default: false
         },
-        low-skil_manual_operations: {
+        lowskil_manual_operations: {
           type: "boolean",
           title: "low-skilled operations in specific manual activities",
           default: false
@@ -247,3 +252,6 @@ const schema = "{
   }
 }
 
+ReactDOM.render((
+  <Form schema={schema} />
+), document.getElementById("app"));

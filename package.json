@@ -1,0 +1,45 @@
+{
+  "name": "kitt4sme-digitaldatasheets",
+  "version": "1.0.0",
+  "description": "This is JSON definition of Kitt4SME Digital Datasheets generator UI Schema can be used with online React JS tools to generate form that will output datasheet in JSON format.  Tool used for creating the datasheets is \"react-jsonschema-form\" which is available at https://github.com/rjsf-team/react-jsonschema-form There is also live playground of the tool where schema can be tested",
+  "main": "public/index.js",
+  "style": "public/styles.css",
+  "files": [
+    "public"
+  ],
+  "scripts": {
+    "start": "rollup -c -w",
+    "build": "rollup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karikolehmainen/kitt4sme-digitaldatasheets.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karikolehmainen/kitt4sme-digitaldatasheets/issues"
+  },
+  "homepage": "https://github.com/karikolehmainen/kitt4sme-digitaldatasheets#readme",
+  "dependencies": {
+    "@rjsf/core": "^3.2.1",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-replace": "^3.0.0",
+    "core-js": "^3.19.3",
+    "postcss-modules": "^4.2.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "regenerator-runtime": "^0.13.9",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-serve": "^1.1.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "^5.3.0",
+    "postcss": "^8.1.14",
+    "rollup": "^2.61.0"
+  }
+}
