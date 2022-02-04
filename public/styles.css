@@ -1,9 +1,0 @@
-.dsheet
-{
-   width:800px; /* or whatever width you want. */
-   max-width:800px; /* or whatever width you want. */
-   display: inline-block;
-   margin: auto;
-   border: 3px solid green;
-   padding: 10px;
-}
