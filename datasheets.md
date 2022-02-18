@@ -7,13 +7,13 @@ Digital datasheet tool is used through RAMP marketplace and provides platform le
 There are requirements for digital data sheets and tools related to the datasheets:
 - Collect information from the component related to ciritical questions in Adaptive Questionnaire
 - Collect information related to deployment of the components
--- component hardware dependencies
--- component software dependencies
+--- component hardware dependencies
+--- component software dependencies
 - Describe API exposed by the compoent if any
 - Describe datamodel that component uses
 - RAMP integratable tool for composing the datasheet and store it in the marketplace
--- Should be able to edit information in the RAMP marketplace
--- Should be anable format datasheet in user friendly format
+--- Should be able to edit information in the RAMP marketplace
+--- Should be anable format datasheet in user friendly format
 # Improvements
 Improvement that the datasheet tool brings is that it enables automated linking of component information to the adaptive questionnaire so that relevant components can easily retrieved. 
 Since datasheet also collects information about the deployment and integration of the tool it helps the evaluation and deployment of the AI component.
