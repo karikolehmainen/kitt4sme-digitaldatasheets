@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 //import Form from 'react-jsonschema-form';
 import Form from "@rjsf/core";
@@ -10,6 +10,29 @@ import { datasheetSchemaObject } from './datasheet.js';
 // listen 8084 port
  
 var operation = 0;
+
+// Local file selection
+function buildFileSelector(){
+  const fileSelector = document.createElement('input');
+  fileSelector.setAttribute('type', 'file');
+  fileSelector.setAttribute('multiple', 'multiple');
+  return fileSelector;
+}
+
+class FileDialogue extends React.Component {
+  componentDidMount(){
+    this.fileSelector = buildFileSelector();
+  }
+  handleFileSelect = (e) => {
+    e.preventDefault();
+    this.fileSelector.click();
+    console.log("Loading file");
+  }
+ 
+  render(){
+    return <button type="submit" onClick={this.handleFileSelect} className="btn btn-success">Load from File</button>
+  }
+}
 
 const handleSaveToPC = (jsonData,filename) => {
   const fileData = JSON.stringify(jsonData);
@@ -44,6 +67,7 @@ function submitToRAMP (event) {
 }
 function loadFromFile (event) {
     console.log("---Load From File---");
+    //fileSelector = new FileDialogue();
     operation = 2;
 }
 
@@ -51,6 +75,7 @@ function saveToFile (event) {
     console.log("---Save To file---");
     operation = 1;
 }
+//    <button type="submit" onClick={loadFromFile} className='btn btn-success'>Load from File</button>
 
 function App() {
 ReactDOM.render(
@@ -59,7 +84,7 @@ ReactDOM.render(
        schema={datasheetSchemaObject}
        onSubmit={onFormSubmit}
     >
-    <button type="submit" onClick={loadFromFile} className='btn btn-success'>Load from File</button>
+    <FileDialogue />
     <button type="submit" onClick={submitToRAMP} className='btn btn-success'>Submit to RAMP</button>
     <button type="submit" onClick={saveToFile} className="btn btn-success">Save to File</button>
     </Form>
