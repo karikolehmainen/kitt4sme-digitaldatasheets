@@ -44,3 +44,14 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 This section ...
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Docker
+
+Application can be also installed as Docker container for easier deployment. To build container give following command in main directory:
+docker build . -t kitt4sme/digitaldatasheets
+
+Container can be then started with docker directly or docer-compose can be used. Configuration is in docker-compose.yml file
+
+docker run -p 441:8080 -d kitt4sme/datasheets
+OR
+docker-compose up -d
