@@ -1,0 +1,20 @@
+version: "3.5"
+
+services:
+    digitaldatasheets:
+        image: kitt4sme/digitaldatasheets:latest
+        hostname: digitaldatasheets
+        container_name: digitaldatasheets
+        expose:
+            - "8084"
+        ports:
+            - 8084:8084
+        networks:
+            - default-dd
+
+networks:
+    default-dd:
+        driver: bridge
+        ipam:
+            config:
+                - subnet: 172.19.6.0/24
