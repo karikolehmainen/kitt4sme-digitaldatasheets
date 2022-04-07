@@ -4,6 +4,25 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//const express = require('express');
+console.log("at index.js");
+
+//const app = express();
+const port = 3000;
+/*
+ app.get('/', (req, res) => {
+  res.send(ReactDOM.render(
+                           <React.StrictMode>
+                             <App />
+                           </React.StrictMode>,
+                           document.getElementById('root')
+                         ));
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+ */
 ReactDOM.render(
   <React.StrictMode>
     <App />
@@ -11,7 +30,3 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
