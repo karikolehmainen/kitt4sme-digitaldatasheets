@@ -5,10 +5,15 @@ services:
         image: kitt4sme/digitaldatasheets:latest
         hostname: digitaldatasheets
         container_name: digitaldatasheets
+        environment:
+            - REACT_APP_NAME="Digital Datasheets"
+            - REACT_APP_RAMP_ENDPOINT=/component
+            - REACT_APP_RAMP_PORT=3001
+            - REACT_APP_RAMP_HOST=http://localhost
         expose:
-            - "8084"
+            - "3000"
         ports:
-            - 8084:8084
+            - 3000:3000
         networks:
             - default-dd
 
