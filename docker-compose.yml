@@ -6,16 +6,35 @@ services:
         hostname: digitaldatasheets
         container_name: digitaldatasheets
         environment:
-            - REACT_APP_NAME="Digital Datasheets"
-            - REACT_APP_RAMP_ENDPOINT=/component
-            - REACT_APP_RAMP_PORT=3001
-            - REACT_APP_RAMP_HOST=http://localhost
+            - APP_NAME="Digital Datasheets"
+            - APP_PORT=3001
+            - AUTH_HOST=<keycloak host>
+            - AUTH_PORT=<port>
+            - DB_HOST=mysql
+            - DB_PORT=3306
+            - DB_USER=root
+            - DB_PASS=<password>
+            - DB_NAME=digitaldatasheets
+            - TLS_CERT=<certfile>
+            - TLS_KEY=<keyfile>
         expose:
             - "3000"
         ports:
             - 3000:3000
         networks:
             - default-dd
+   mysql:
+        image: mysql:5.7.38
+        hostname: mysql
+        container_name: mysql
+        environment:
+            - MYSQL_ROOT_PASSWORD=secret
+        networks:
+            - default-dd
+        ports:
+            - '3306:3306'
+        volumes:
+            - mysql-db:/var/lib/mysql
 
 networks:
     default-dd:
