@@ -2,9 +2,14 @@
 
 This tool is for creating digital datasheets for AI components in the context of Kitt4SME EU project
 
-## Available Scripts
-
-In the project directory, you can run:
+## Dependencies
+You will need Node.js version 16 or higher to run the tool. In Ubuntu 20 LTS you can update the Node.js respository with command:
+```
+   curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+   sudo apt-get install -y nodejs</blo
+```
+## Launch using Node.js
+In order to launch the tool using Node.js you can use npm tool and using following scripts in project directory
 
 ### `npm start`
 
